@@ -15,7 +15,7 @@ public class ResetAttack : MonoBehaviour {
 		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("idle")) {
 			idlearm.SetActive(true);
 			gameObject.SetActive(false);
-			Debug.Log ("melee attack");
+			Debug.Log ("attack");
 		}
 	}
 }
