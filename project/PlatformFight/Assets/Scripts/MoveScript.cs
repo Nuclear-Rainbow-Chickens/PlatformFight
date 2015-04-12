@@ -22,14 +22,14 @@ public class MoveScript : MonoBehaviour {
 	}
 
 	void InputMovement() {
-		rb.velocity = new Vector2 (Input.GetAxis ("Horizontal") * speed, rb.velocity.y);
-		if (Input.GetAxis ("Horizontal") < 0) {
+		rb.velocity = new Vector2 (InputC.getHorz() * speed, rb.velocity.y);
+		if (InputC.getHorz() < 0) {
 			transform.localScale = new Vector3 (-1, transform.localScale.y, 1);
 		} 
-		else if (Input.GetAxis ("Horizontal") > 0) {
+		else if (InputC.getHorz() > 0) {
 			transform.localScale = new Vector3 (1, transform.localScale.y, 1);
 		}
-		if (( Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) )&& canJump) {
+		if (InputC.jump() && canJump) {
 			rb.velocity = new Vector2 (rb.velocity.x, jumpHeight);
 			canJump = false;
 		}

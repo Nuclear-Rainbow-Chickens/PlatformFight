@@ -13,11 +13,11 @@ public class Attack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Z)) {
+		if(InputC.melee()) {
 			meleeObj.SetActive(true);
 			gameObject.SetActive(false);
 		}
-		if(Input.GetKeyDown(KeyCode.X)) {
+		if(InputC.ranged()) {
 			rangedObj.SetActive(true);
 			gameObject.SetActive(false);
 		}
