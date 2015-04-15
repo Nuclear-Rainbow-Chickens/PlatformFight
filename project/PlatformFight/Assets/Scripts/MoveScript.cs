@@ -16,9 +16,9 @@ public class MoveScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//if (nv.isMine) {
+		if (nv.isMine) {
 			InputMovement ();
-		//}
+		}
 	}
 
 	void InputMovement() {
